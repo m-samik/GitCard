@@ -1,0 +1,26 @@
+.card{
+    height: 300px;
+    width: 500px;
+    background-image: linear-gradient(black, red , yellow);
+    margin: auto;
+    color:white;
+    border-radius: 12px;
+}
+.gitlogo{
+    position: relative;
+    left: 10px;
+    top: -30px;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    background-image: url('images/git.png');
+}
+.gitlogo img{
+    height: fit-content;
+    width: fit-content;    
+}
+.profile{
+    position: relative;
+    top: -70px;
+    left: 380px;
+}

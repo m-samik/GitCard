@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+ 
     <title>GitCard</title>
 </head>
+<style>
+    .checked {
+      color: orange;
+    }
+    </style>
 <body>
+    <form onsubmit="getdetails(); return false;">
+        Username : <input type="name" id="unname" required>
+    <input type="submit">
+    </form>
+
+<img id = "text" src="images/git.png">
+<div id="test">
+    <div class="card">
     
+        
+        Name: <b><span id="name">Git Card Official </span></b><br>
+        Following : <b><span id="following">250</span></b><br>
+        Public Repos: <b><span id="prepo">145</span></b><br>
+        Last Updated: <b><span id ="lupdated">12/03/2021</span></b><br>
+    <div class="profile">
+        <img id="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style="width: 100px; border-radius: 50%;"><br>
+    </div>
+    <div class="gitlogo">
+    </div>
+
+</div>
+</div>
+
+
+<button onclick= "html2canvas()" >click me</button>
 </body>
 </html>
