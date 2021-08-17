@@ -1,7 +1,12 @@
-function html2canvas(){
-    html2canvas(document.getElementById("text")).then(function(canvas) {
-        document.body.appendChild(canvas);
-    });
+function doCapture() {
+	window.scrollTo(0, 0);
+
+	// Convert the div to image (canvas)
+	html2canvas(document.getElementById("card")).then(function (canvas) {
+
+		// Get the image data as JPEG and 0.9 quality (0.0 - 1.0)
+		console.log(canvas.toDataURL("image/jpeg", 0.9));
+	});
 }
 function getdetails(){
     var uname= document.getElementById("unname").value;

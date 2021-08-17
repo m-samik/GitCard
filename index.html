@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" href="style.css">
  
     <title>GitCard</title>
@@ -21,25 +22,46 @@
     <input type="submit">
     </form>
 
-<img id = "text" src="images/git.png">
-<div id="test">
-    <div class="card">
-    
-        
+<div class="test">
+    <div id="card">
         Name: <b><span id="name">Git Card Official </span></b><br>
         Following : <b><span id="following">250</span></b><br>
         Public Repos: <b><span id="prepo">145</span></b><br>
         Last Updated: <b><span id ="lupdated">12/03/2021</span></b><br>
-    <div class="profile">
-        <img id="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style="width: 100px; border-radius: 50%;"><br>
-    </div>
-    <div class="gitlogo">
-    </div>
+        <div class="profile">
+            <img id="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style="width: 100px; border-radius: 50%;">
+        </div>
+         <div class="gitlogo">
+        </div>
 
 </div>
 </div>
 
+<script type="text/javascript">
 
-<button onclick= "html2canvas()" >click me</button>
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title:{
+                text: "My First Chart in CanvasJS"              
+            },
+            data: [              
+            {
+                // Change type to "doughnut", "line", "splineArea", etc.
+                type: "column",
+                dataPoints: [
+                    { label: "apple",  y: 10  },
+                    { label: "orange", y: 15  },
+                    { label: "banana", y: 10  },
+                    { label: "mango",  y: 50  },
+                    { label: "grape",  y: 28  }
+                ]
+            }
+            ]
+        });
+        chart.render();
+    }
+    </script>
+<!-<div id="chartContainer" style="height: 300px; width: 50%;"></div>-->    
+<button onclick= "doCapture()" >click me</button>
 </body>
 </html>

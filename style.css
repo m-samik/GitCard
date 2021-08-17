@@ -1,11 +1,18 @@
-.card{
+.test{
+    max-width: 500px;
     height: 300px;
     width: 500px;
-    background-image: linear-gradient(black, red , yellow);
     margin: auto;
+
+}
+
+#card{
+    background-image: linear-gradient(black, red , yellow);
     color:white;
     border-radius: 12px;
 }
+
+
 .gitlogo{
     position: relative;
     left: 10px;
@@ -20,6 +27,7 @@
     width: fit-content;    
 }
 .profile{
+    display: block;
     position: relative;
     top: -70px;
     left: 380px;
